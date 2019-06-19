@@ -4,22 +4,22 @@ pipeline {
     tools {nodejs "node"}
 
     stages {
-         stage('install dependencies') {
+         stage('dependencies') {
             steps {
                 sh 'npm install'
             }
         }
-        stage('Build dist files') {
+        stage('Build') {
             steps {
                 sh 'npm run build'
             }
         }
-        stage('Run unit tests') {
+        stage('tests') {
             steps {
                 sh 'npm run test'
             }
         }
-        stage('deploy application') {
+        stage('deploy ') {
             steps {
                 sh 'npm run deploy'
             }
